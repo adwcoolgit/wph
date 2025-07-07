@@ -5,9 +5,228 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Member Class Registration</title>
   </head>
-  <body>
+  <body style="padding: 50px">
+    <h1>Formulir Pendaftaran Kursus</h1>
     <form action="">
-      <table></table>
+      <fieldset>
+        <legend>Mohon isi data secara lengkap dan benar</legend>
+        <table cellpadding="5" cellspacing="0" style="padding: 15px">
+          <tr>
+            <td width="150"><label for="name">Nama Lengkap</label></td>
+            <td width="20">: *</td>
+            <td width="350" colspan="4">
+              <input
+                type="text"
+                name="name"
+                maxlength="100"
+                title="Nama lengkap wajib diisi sesuai KTP"
+                required="required"
+                placeholder="Masukkan nama lengkap"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td width="150"><label for="birthdate">Tanggal Lahir</label></td>
+            <td width="10">:</td>
+            <td><input type="date" name="birthdate" required="required" /></td>
+            <td width="150">
+              <label for="gender">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jenis Kelamin
+              </label>
+            </td>
+            <td width="10">:</td>
+            <td width="250>">
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="L"
+                required
+              />Laki-laki
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="P"
+              />Perempuan
+            </td>
+          </tr>
+          <tr>
+            <td width="150"><label for="originschool">Asal Sekolah</label></td>
+            <td width="20">: *</td>
+            <td>
+              <select name="originschool" id="" required="required">
+                <option value="" disabled mute selected>
+                  Pilih asal sekolah
+                </option>
+                <option value="SMA 1">SMA 1</option>
+                <option value="SMA 2">SMA 2</option>
+                <option value="SMA 3">SMA 3</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </td>
+            <td>
+              <label for="class"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelas </label>
+            </td>
+            <td width="20">: *</td>
+            <td>
+              <select name="class" id="" required="required">
+                <option value="" disabled mute selected>Pilih kelas</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="address">Alamat Lengkap</label></td>
+            <td width="20">: *</td>
+            <td colspan="4">
+              <textarea
+                name="address"
+                id=""
+                cols="60"
+                rows="5"
+                required="required"
+                maxlength="300"
+                title="Alamat lengkap wajib diisi sesuai KTP"
+                placeholder="Jl. Hyper Text language 1, Jakarta"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="phone">No. Telepon/HP</label></td>
+            <td width="20">: *</td>
+            <td colspan="4">
+              <input
+                type="text"
+                name="phone"
+                maxlength="15"
+                title="Masukan no. telepon yang dapat dihubungi"
+                required="required"
+                placeholder="Masukkan no. telepon"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="parentname">Nama Orang Tua/Wali</label></td>
+            <td width="10">:</td>
+            <td colspan="4">
+              <input
+                type="text"
+                name="parentname"
+                maxlength="100"
+                title="Nama orang tua/wali yang dapat dihubungi"
+                placeholder="Masukkan nama orang tua/wali"
+                width="350"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="parentjob">Pekerjaan Orang Tua/Wali</label></td>
+            <td width="10">:</td>
+            <td colspan="4">
+              <select name="parentjob">
+                <option value="" disabled mute selected>Pilih pekerjaan</option>
+                <option value="PNS">PNS</option>
+                <option value="Swasta">Swasta</option>
+                <option value="Wirausaha">Wirausaha</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="course">Program Kursus</label>
+            </td>
+            <td width="20">: *</td>
+            <td colspan="4">
+              <input
+                type="checkbox"
+                name="course"
+                id="webdev"
+                value="Web Development"
+              />
+              Web Development
+              <input
+                type="checkbox"
+                name="course"
+                id="mobdev"
+                value="Mobile Development"
+              />
+              Mobile Development
+              <input
+                type="checkbox"
+                name="course"
+                id="datasci"
+                value="Data Science"
+              />
+              Data Science
+              <input
+                type="checkbox"
+                name="course"
+                id="uiux"
+                value="UI/UX Design"
+              />
+              UI/UX Design
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="courseday">Hari Kursus</label>
+            </td>
+            <td width="20">: *</td>
+            <td colspan="4">
+              <input
+                type="radio"
+                name="courseday"
+                id="senin"
+                value="Senin"
+                required
+              />
+              Senin &amp; Kamis
+              <input type="radio" name="courseday" id="selasa" value="Selasa" />
+              Selasa &amp; Jumat
+              <input type="radio" name="courseday" id="rabu" value="Rabu" />
+              Rabu &amp; Sabtu
+            </td>
+          </tr>
+          <tr>
+            <td><label for="coursetime">Waktu Kursus</label></td>
+            <td width="20">: *</td>
+            <td colspan="4">
+              <input type="radio" name="coursetime" id="1" value="1" required />
+              14:00 - 16:00
+              <input type="radio" name="coursetime" id="2" value="2" />
+              16:00 - 18:00
+              <input type="radio" name="coursetime" id="3" value="3" />
+              18:00 - 20:00
+            </td>
+          </tr>
+          <tr rowspan="2">
+            <td colspan="5"></td>
+          </tr>
+          <tr>
+            <td colspan="5"></td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              (*Catatan: Harap mengisi semua kolom yang wajib diisi dengan benar
+              dan lengkap.)
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5"></td>
+          </tr>
+          <tr>
+            <td colspan="5"></td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="Kirim Formulir" /></td>
+            <td><input type="reset" name="" id="" /></td>
+          </tr>
+        </table>
+      </fieldset>
     </form>
   </body>
 </html>
